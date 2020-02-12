@@ -1,0 +1,65 @@
+h1 {
+  color: red;
+}
+
+span {
+  border: 1px solid #000;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+span:hover .back-change {
+  background-color: red;
+}
+
+@keyframes myAnimation {
+  50% {
+    transform: translateX(-5%);
+  }
+  50% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.myAnimation {
+  animation: myAnimation 1s forwards;
+  -webkit-animation: myAnimation 1s forwards;
+  transition: transform 5s linear;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  width: 25.625%;
+  height: 61%;
+  -webkit-transition: background-color 0.1s ease;
+  transition: background-color 0.1s ease;
+  background-color: transparent;
+}
+.navigation:hover {
+  background-color: red;
+}
+.navigation nav {
+  position: relative;
+}
+.overflow-height {
+  overflow-x: hidden;
+  height: 100%;
+  position: relative;
+}
+
+.navigation nav .scales {
+  position: absolute;
+  z-index: -1;
+  /* top: 0;
+  left: 0; */
+  display: block;
+  content: "";
+  opacity: 0.99;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  backface-visibility: hidden;
+}
